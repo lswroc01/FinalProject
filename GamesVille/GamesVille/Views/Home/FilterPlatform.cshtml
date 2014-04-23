@@ -1,0 +1,103 @@
+﻿@model IEnumerable<GamesVille.Models.Game>
+
+
+<link href="~/Content/Includes/_gamesVille.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "FilterPlatform";
+}
+
+    <img src="~/Content/Images/logo.png" class="img-responsive" width="500" height="350" alt="Responsive image">
+    @*<h1>GAMEZVILLE</h1>
+        <h3>The right place for gamers</h3>*@
+<hr />
+
+<div class="container-fluid">
+    <div class="col-md-12">
+
+        <div class="row carousel-holder">
+            <div class="col-md-12 aligncenter container-fluid">
+                <div class="span12 aligncenter row-fluid">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel" data-slide-to="1"></li>
+                            <li data-target="#carousel" data-slide-to="2"></li>
+                            <li data-target="#carousel" data-slide-to="3"></li>
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="slide-image img-rounded img-responsive" src="/Content/Images/Carousel_Adventure.jpg" width="1200" height="300" alt="">
+                                <span class="carousel-caption row-fluid">
+                                    <a href="/Home/FilterCategory?category=Action%20Adventure" class="btn btn-success btn-large active pull-right"><span class="glyphicon glyphicon-play"></span>  Action &amp; Adventure Games</a>
+                                </span>
+                            </div>
+
+                            <div class="item">
+                                <img class="slide-image img-rounded img-responsive" src="/Content/Images/Carousel_Shooter.jpg" title="Shooter" alt="Shooter" width="1200" height="300" alt="">
+                                <span class="carousel-caption row-fluid">
+                                    <a href="/Home/FilterCategory?category=Shooter" class="btn btn-success btn-large active pull-right"><span class="glyphicon glyphicon-play"></span>  Shooter Games</a>
+                                </span>
+                            </div>
+
+                            <div class="item">
+                                <img class="slide-image img-rounded img-responsive" src="/Content/Images/Carousel_Sports.jpg" title="Sports" alt="Sports" width="1200" height="300" alt="">
+                                <span class="carousel-caption row-fluid">
+                                    <a href="/Home/FilterCategory?category=Sports" class="btn btn-success btn-large active pull-right"><span class="glyphicon glyphicon-play"></span>  Sports Games</a>
+                                </span>
+                            </div>
+
+                            <div class="item">
+                                <img class="slide-image img-rounded img-responsive" src="/Content/Images/Carousel_Arcade.jpg" title="Arcade and Puzzle" alt="Arcade and Puzzle" width="1200" height="300" alt="">
+                                <span class="carousel-caption row-fluid">
+                                    <a href="/Home/FilterCategory?category=Arcade%2FPuzzle" class="btn btn-success btn-large active pull-right"><span class="glyphicon glyphicon-play"></span>  Arcade &amp; Puzzle Games</a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <a class="left carousel-control" href="#carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="col-md-12" id="content">
+
+        <h3>Filter by Platform</h3>
+        <br />
+        <br />
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-3">
+
+                    <img src=@Html.DisplayFor(modelItem => item.PictureURL) width="180" height="200" alt="" class="img-rounded" />
+                    <br />
+                    @Html.DisplayFor(modelItem => item.Platform)
+                    <br />
+                    @Html.DisplayFor(modelItem => item.Title)
+                    <br />
+                    @Html.ActionLink("Details", "More", new { id = item.ID })
+
+                </div>
+
+
+            }
+
+        </div>
+
+
+    </div>
+
+
+
+</div>

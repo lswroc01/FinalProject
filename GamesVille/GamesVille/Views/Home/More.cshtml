@@ -1,0 +1,72 @@
+﻿@model GamesVille.Models.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Category)</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <img src=@Html.DisplayFor(modelItem => modelItem.PictureURL) width="280" height="300" alt="" class="img-rounded" />
+        </div>
+        <div class="col-md-9">
+            <dl class="dl-horizontal">
+
+
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ReleaseDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ReleaseDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Platform)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Platform)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ESBR_Rating)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ESBR_Rating)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Category)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Category)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rating)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Rating)
+                </dd>
+
+            </dl>
+
+        </div>
+
+
+    </div>
+
+    
+</div>
+<p>   
+    @Html.ActionLink("Back to List", "Index")
+</p>
