@@ -1,7 +1,189 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<section class="content bg-color green">
+    <div class="container">
+        <div class='row aligncenter'>
 
-<p>Use this area to provide additional information.</p>
+            <p class='large'>
+                <h1><u>Video Game Rental Website</u></h1>
+                <h4>
+                    Website Development: Annia Martinez
+                    </br>
+                    Website Design: Laura Thomas
+                </h4>
+            <p />
+            <hr />
+
+            <p class='medium'>
+                <h3>
+                    <i>An MVC.Net Web Application built using Entity Framework 6</i>
+                </h3>
+            <p />
+
+            <div class="row">
+
+                <div class="span2"></div>
+                <div id="resource-list" class="span9">
+                    <section id="component">
+
+                        <h3 class="resource-description">Additional tools and technologies used:</h3>
+
+                        <div class="row">
+                            <div class="span9">
+                                <h4 class="resource-description">Bootstrap</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span9 resource-listing">
+                                <div class="resource-link">
+                                    <a href="http://getbootstrap.com/2.3.2/"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="span9">
+                                <h4 class="resource-description">Jquery</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span9 resource-listing">
+                                <div class="resource-link">
+                                    <a href="https://jquery.org/"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="span9">
+                                <h4 class="resource-description">Modernizr.js</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span9 resource-listing">
+                                <div class="resource-link">
+                                    <a href="http://modernizr.com/"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="span9">
+                                <h4 class="resource-description">Respond.js</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span9 resource-listing">
+                                <div class="resource-link">
+                                    <a href="https://github.com/scottjehl/Respond"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="span9">
+                                <h4 class="resource-description">Validate.js</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span9 resource-listing">
+                                <div class="resource-link">
+                                    <a href="http://validatejs.org/"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <hr />
+
+                    <section>
+                        <p>
+                            <h4>Features & Functionality:</h4>
+                            <li>	User Account Registration </li>
+                            <li>	Sign In Portal </li>
+                            <li>	View inventory & details using several “Sort” & “Filter” options: </li>
+                            <ul>
+                                Sort by Game Type (i.e. Sports, Fantasy, Action, etc.)
+                                <ul>
+                                    Sort by Console Type (i.e. PS3, PS4, Xbox, etc.)
+                                    <ul>
+                                        Sort by ESRB Rating (i.e. M, T, E, E10, NR, etc.)
+                                        <li>	Add items to Cart </li>
+                                        <li>	Place an order </li>
+                                        <li>	Edit inventory and details (Admin only) </li>
+                                        <li>	Set Permissions </li>
+
+                                        Users will have varying levels of permissions assigned to them depending on what user type they are.  The three user “types” or levels will be as follows:
+
+                                        <li>	Guest User (Lowest level of privileges) </li>
+                                        <li>	Registered Gold Member </li>
+                                        <li>	Registered Silver Member </li>
+                                        <li>	Registered Bronze Member </li>
+                                        <li>	Administrator (Highest level of privileges) </li>
+
+                                        For Example: A Guest user doesn’t need to be signed in in order to view the inventory and descriptions, but they must be registered and signed in in order to add items to the cart and complete a rental order.  Also, registered users will NOT have administrative privileges, meaning that they will not have access to view or edit the “Inventory Management” page, which will be where inventory is added, edited and/or deleted by (only Admin users will have these privileges).
+                        </p>
+
+                        <p>
+                            <h4>Webpage Specifics:</h4>
+                            All pages will contain a sidebar (which will include sort & filter options), links to Register & Sign In, which will be located on the top right, a link back to the Homepage and a link to the Shopping Cart (if signed in as a Registered User)
+                            <br />
+                            <br />
+                            <h5> Registration Portal:</h5>
+                            <li> Required Fields for registration will be as follows:</li>
+                            <ul>	Username </ul>
+                            <ul>	Password </ul>
+                            <ul>	Email Address </ul>
+                            <ul>	Terms & Conditions link </ul>
+                            <ul>	“Agree to Terms & Conditions” Checkbox </ul>
+                            <ul>	Entry form for payment information </ul>
+
+                            Note: Users will only be required to enter their payment information upon registration (unless they are updating their payment info).  This initial entry will sign them up as a member and allow them to rent either 1, 2 or 3 video games at a time, which directly corresponds to the Member Level that they enroll in.  They will be able to add additional games to their queue, with a new game being sent out once the previous game has been returned.  Members will incur a reoccurring monthly charge for an amount that corresponds with their Member Level (see below).
+                            <br />
+                            <br />
+
+                            <h5>Member Levels:</h5>
+                            <ul>	Gold: $17.99 per mo. (rent 3 games at a time) </ul>
+                            <ul>	Silver: $15.99 per mo. (rent 2 games at a time) </ul>
+                            <ul>	Bronze: $9.99 per mo. (rent 1 game at a time) </ul>
+
+
+                            Reoccurring payments will continue until the user decides to cancel their membership.  In the event that their payment source expires or is no longer good, their account will be temporarily blocked from ordering new games until a valid payment type has been added and confirmed.
+
+                            <br />
+                            <br />
+
+                            <h5>Sign In Portal:</h5>
+                            <li>A valid username and password will be required in order to sign in.</li>
+                            <br />
+                            <br />
+
+                            <h5>Homepage:</h5>
+                            <li>The homepage will display a randomized set of 10-15 video games (with an option to view more by clicking “Next”).  Each game displayed will include an image, the Title of the game and a link to click for more details.</li>
+                            <br />
+                            <br />
+
+                            <h5>Inventory Details Page:</h5>
+                            <li>Once “Details” is selected for a specific game from the Homepage, the user will navigate to the Details Page, which will include the following:</li>
+                            <ul>	Image </ul>
+                            <ul>	Title </ul>
+                            <ul>	Type </ul>
+                            <ul>	Rating </ul>
+                            <ul>	Console </ul>
+                            <ul>	Creator </ul>
+                            <ul>	Description </ul>
+                            <ul>	Quantity in Stock (viewable by admin only?) </ul>
+                            <ul>	Price </ul>
+                            <ul>	“Add to Cart” button </ul>
+                            <br />
+                            <br />
+
+                            <h5>Inventory Management Page:</h5>
+                            <li>This page will be viewable to Administrative users ONLY.  They will be able to manage their video game inventory by Adding, Updating or Deleting any of the above listed Details.  All adds, updates and deletes made on this page will directly correspond with the details that are stored in the database for each video game.</li>
+                            <br />
+                            <br />
+
+                            <h5>Shopping Cart:</h5>
+                            <li>The Shopping Cart will display the Image, Title, Price and Quantity for each video game that the user adds to their Cart.  For each game, there will be an option to increment/decrement the Quantity as well as a “Delete” and a “Continue Shopping” button.  The total price of the order will be displayed at the bottom, along with an “Order Now” button.</li>
+                        </p>
+
+                    </section>
